@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  ubuntu_leo:
+    container_name: ubuntu_leo
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "10022:22" 
+      - "10080:80" 
+      - "10443:443" 
+      - "15432:5432" 
+      - "18000:8000" 
+  ubuntu_cyclone:
+    container_name: ubuntu_cyclone
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "20022:22" 
+      - "20080:80" 
+      - "20443:443" 
+      - "25432:5432" 
+      - "28000:8000" 
+  ubuntu_yihua:
+    container_name: ubuntu_yihua
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "30022:22" 
+      - "30080:80" 
+      - "30443:443" 
+      - "35432:5432" 
+      - "38000:8000" 
